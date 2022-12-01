@@ -19,7 +19,7 @@ const Products = () => {
   return (
     <div className="container">
       <div className="row">
-        <h1>My Products </h1>
+        <h1 className="judul">Daftar Barang </h1>
         {products.map((produk) => (
           <div className="col-3 mb-4 ">
             <Card className="Card">
@@ -27,8 +27,8 @@ const Products = () => {
               <Card.Body>
                 <Card.Title>{produk.title}</Card.Title>
                 <Card.Text>${produk.price}</Card.Text>
-                <NavLink to={`/product/${produk.id}`} variant="primary">
-                  Buy Now
+                <NavLink to={`/product/${produk.id}`} className="btn btn-outline-dark">
+                  Detail
                 </NavLink>
               </Card.Body>
             </Card>

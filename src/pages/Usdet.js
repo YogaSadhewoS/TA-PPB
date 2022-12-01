@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { NavLink } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 
 const Usdet = () => {
@@ -25,12 +26,17 @@ const Usdet = () => {
     return (
       <>
         <div className="col-md-6">
-          <p>
-            {usdet.email}
-            </p>
-        </div>
-        <div className="col-md-6">
-
+          <Card>
+            <Card.Body>
+              <Card.Subtitle className="mb-2 text-muted">
+                {usdet.username}
+              </Card.Subtitle>
+              <hr></hr>
+              <Card.Text>Email: {usdet.email}</Card.Text>
+              <Card.Text>Password: {usdet.password}</Card.Text>
+              <NavLink to={`/user`} className="btn btn-dark">Back</NavLink>
+            </Card.Body>
+          </Card>
         </div>
       </>
     );

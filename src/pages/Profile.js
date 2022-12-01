@@ -9,7 +9,7 @@ export default function Profile() {
         alt="author pic"
       />
       <p>
-        Halo, kenalin saya Yoga Sadhewo Shalahudin biasa dipanggil Yoga
+        Halo, perkenalkan saya Yoga Sadhewo Shalahudin biasa dipanggil Yoga
         . Asal dari Salatiga. Saat ini saya sedang menempuh 
         pendidikan di Universitas Diponegoro jurusan Teknik Komputer.
         Berikut link {' '}

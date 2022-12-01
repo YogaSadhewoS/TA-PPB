@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Card from "react-bootstrap/Card";
+import { NavLink } from "react-router-dom";
 
 const Product = () => {
   const { id } = useParams();
@@ -31,12 +31,16 @@ const Product = () => {
             height="400px"
             width="400px"
           />
-          <p>
-            {product.price}
-          </p>
         </div>
         <div className="col-md-6">
-
+          <h1 className="display-5">{product.title}</h1>
+          <h3 className="display-6 fw-bold my-4">$ {product.price}</h3>
+        <p className="load">
+          Description:
+          <br></br>
+            {product.description}
+          </p>
+          <NavLink to="/home" className="btn btn-dark">Back</NavLink>
         </div>
       </>
     );
