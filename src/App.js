@@ -7,17 +7,21 @@ import './App.css'
 import Profile from './pages/Profile'
 import User from './pages/User'
 import Products from './pages/Home'
+import Product from './pages/Detail'
+import Usdet from './pages/Usdet'
 
 function App() {
   return (
     <BrowserRouter>
       <header>
-        <p id="titleGroup">TA Yogs</p>
+        <p id="titleGroup">TA Yoga</p>
       </header>
       <Routes>
         <Route path="/home" element={<Products />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/user" element={<User />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/usdet/:id" element={<Usdet />} />
       </Routes>
       <footer>
         <NavLink to="/home" className="iconWrapper">
